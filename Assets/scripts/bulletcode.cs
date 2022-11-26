@@ -8,6 +8,7 @@ public class bulletcode : MonoBehaviour
     SpriteRenderer renderer;
     Rigidbody2D rigidbody;
     float speedBullet = 5;
+    public Vector3 look = Vector3.zero;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +18,16 @@ public class bulletcode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = Input.mousePosition;
-        Vector3 mousePositionInUnity = Camera.main.ScreenToWorldPoint(mousePosition);
-        Vector3 korpusPosition = transform.position;
-        Vector3 look = mousePositionInUnity - korpusPosition;
-        look.z = 0;
-        transform.right = look;
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        if (Vector3.zero != look)
+        {
+            Vector3 move = look;
+            Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+            rigidbody.AddRelativeForce(move * 3);
+
+        }
 
 
-        Vector3 move = Vector3.right * Input.GetAxis("Fire1");
-        rigidbody.AddRelativeForce(move * speedBullet);
+       
 
 
     }

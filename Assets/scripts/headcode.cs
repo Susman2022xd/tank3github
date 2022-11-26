@@ -40,6 +40,8 @@ public class headcode : MonoBehaviour
             fire = false;
 
             GameObject shootanime = Instantiate(shoot, shootspawn.transform);
+            GameObject bullet;
+            bullet.GetComponent<bulletcode>().look = look;
             Destroy(shootanime, 0.25f);
         
             
