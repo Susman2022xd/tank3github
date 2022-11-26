@@ -871,3 +871,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoot: {fileID: 8447411407976141498, guid: 5e528705c52f32f47a27136ea8e19a49, type: 3}
   shootspawn: {fileID: 1416995716}
+  bulletObj: {fileID: 6809663141349743057, guid: f9ceaf345de46534f8c9a4f3e787d693, type: 3}
