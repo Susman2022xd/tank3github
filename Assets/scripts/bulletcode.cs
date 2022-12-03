@@ -9,6 +9,7 @@ public class bulletcode : MonoBehaviour
     Rigidbody2D rigidbody;
     float speedBullet = 5;
     public Vector3 look = Vector3.zero;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +19,21 @@ public class bulletcode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.zero != look)
+       
+            
+
+
+
+
+            
+
+
+            if (Vector3.zero != look)
         {
             Vector3 move = look;
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
             rigidbody.AddRelativeForce(move * 3);
+
 
         }
 
