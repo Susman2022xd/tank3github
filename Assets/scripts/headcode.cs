@@ -10,7 +10,7 @@ public class headcode : MonoBehaviour
     bool fire = true;
     public GameObject shoot;
     public GameObject shootspawn;
-    
+    public GameObject bulletObj;
     float mouseX = 10.3f;
     SpriteRenderer renderer;
     Rigidbody2D rigidbody;
@@ -40,6 +40,8 @@ public class headcode : MonoBehaviour
             fire = false;
 
             GameObject shootanime = Instantiate(shoot, shootspawn.transform);
+            GameObject bullet = Instantiate(bulletObj, shootspawn.transform);
+            bullet.GetComponent<bulletcode>().look = look;
             Destroy(shootanime, 0.25f);
         
             

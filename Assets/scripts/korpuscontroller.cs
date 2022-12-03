@@ -20,6 +20,5 @@ public class korpuscontroller : MonoBehaviour
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.AddRelativeForce(move * 3);
         transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z - hor / 2);
-
     }
 }
